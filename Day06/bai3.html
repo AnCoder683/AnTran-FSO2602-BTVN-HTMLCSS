@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(111, 66, 66);
+
+        transform: rotate(40deg);
+        position: relative;
+        top: 100px;
+        left: 100px;
+        .child1 {
+          width: 100px;
+          height: 100px;
+          background-color: rgb(111, 66, 66);
+          border-radius: 50%;
+          position: absolute;
+          top: -46px;
+          left: 0;
+        }
+        .child2 {
+          width: 100px;
+          height: 100px;
+          background-color: rgb(111, 66, 66);
+
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          right: 46px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="child1"></div>
+      <div class="child2"></div>
+    </div>
+  </body>
+</html>

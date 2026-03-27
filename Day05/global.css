@@ -1,0 +1,11 @@
+﻿:root {
+  --urgent-color: rgba(229, 72, 77, 1);
+  --info-color: rgba(62, 154, 216, 1);
+  --promo-color: rgba(245, 158, 11, 1);
+  --box-desc-color: rgba(0, 0, 0, 0.7);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+html {
+  font-family: "Inter", sans-serif;
+}

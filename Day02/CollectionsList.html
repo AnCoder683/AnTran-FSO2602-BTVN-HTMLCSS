@@ -3,206 +3,330 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="rs.css" />
     <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: Arial, sans-serif;
-      }
-      .colection-list {
-        display: flex;
-        gap: 1rem;
-      }
-      .container {
-        width: 80%;
-        padding: 1rem 1rem 2rem 1rem;
-        border: 1px solid #ccc;
-        border-radius: 1rem;
-      }
-      ul {
-        list-style-type: none;
+      * {
+        box-sizing: border-box;
+        margin: 0;
         padding: 0;
+      }
+
+      html {
+        font-family: "Poppins", sans-serif;
+        color: rgba(14, 14, 56, 1);
+      }
+
+      body {
+        height: 100vh;
         display: flex;
-        gap: 0.2rem;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(216, 218, 226);
+        position: relative;
       }
-      li {
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-        margin-bottom: 5px;
-        border-radius: 0.2rem;
-      }
-      .colection {
-        margin-top: 2rem;
+
+      .container {
+        max-width: 1563px;
+        max-height: 777px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1563 / 777;
+
+        border-radius: 26px;
+        padding: 62px;
+        background-color: rgba(239, 240, 241, 1);
+
         display: flex;
         flex-direction: column;
-        width: 33%;
-        border: 1px solid #cccccc;
-        border-radius: 1rem;
-        padding: 2rem 1rem;
+        gap: 56px;
+        box-shadow: 0px 76px 27px 0px rgba(6, 27, 82, 0.1);
       }
-      .main-img img {
-        width: 100%;
-        border-radius: 0.5rem;
-      }
-      .imgs-list {
+
+      .collection-header {
         display: flex;
-        gap: 0.2rem;
-        margin-top: 0.5rem;
+        flex-direction: column;
+        gap: 24px;
+        h1 {
+          font-weight: 700;
+          font-size: 32px;
+          color: rgba(14, 14, 56, 1);
+          font-family: "Merriweather", serif;
+        }
+
+        .collection-fillter {
+          display: flex;
+          gap: 8px;
+          a {
+            color: rgba(14, 14, 56, 1);
+            text-decoration: none;
+            padding: 8px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
       }
-      .imgs-list img {
-        width: 33%;
+
+      .collections-list {
+        display: flex;
+        gap: 64px;
+
+        .collection-card {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          width: 437px;
+          height: 489px;
+          border-radius: 32px;
+          background-color: rgba(255, 255, 255, 1);
+          padding: 24px;
+        }
       }
-      .ref {
+
+      .img-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        .imgs {
+          display: flex;
+          gap: 16px;
+          img {
+            width: 119px;
+            height: 97px;
+          }
+        }
+      }
+
+      .collection-info {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 0.5rem;
-      }
-      .ref p {
-        margin: 0;
-      }
-      .image-count {
-        display: flex;
-        align-items: center;
-        gap: 0.2rem;
-        line-height: 100%;
+        .title {
+          font-weight: 500;
+          font-size: 24px;
+        }
+        .status {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          .img-count {
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
       }
     </style>
+    <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <h1>Popular Collections</h1>
-      <ul>
-        <li>Profile</li>
-        <li>New York</li>
-        <li>Relaxing</li>
-        <li>Person</li>
-        <li>Fashion</li>
-      </ul>
-      <div class="colection-list">
-        <div class="colection">
-          <div class="main-img">
-            <img src="./imgs/1.png" alt="" />
-          </div>
-          <div class="imgs-list">
-            <img src="./imgs/2.png" alt="" />
-            <img src="./imgs/3.png" alt="" />
-            <img src="./imgs/4.png" alt="" />
-            <img src="./imgs/5.png" alt="" />
-          </div>
-          <div class="ref">
-            <p>People</p>
-            <p class="image-count">
-              <svg
-                width="31"
-                height="31"
-                viewBox="0 0 31 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_2_22)">
-                  <path
-                    d="M19.375 10.3333H19.3871"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M21.9583 5.16675H9.04167C6.90157 5.16675 5.16667 6.90164 5.16667 9.04175V21.9584C5.16667 24.0985 6.90157 25.8334 9.04167 25.8334H21.9583C24.0984 25.8334 25.8333 24.0985 25.8333 21.9584V9.04175C25.8333 6.90164 24.0984 5.16675 21.9583 5.16675Z"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5.16667 19.3751L10.3333 14.2084C10.9224 13.6416 11.5906 13.3431 12.2708 13.3431C12.951 13.3431 13.6193 13.6416 14.2083 14.2084L20.6667 20.6667"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M18.0833 18.0833L19.375 16.7916C19.9641 16.2248 20.6323 15.9264 21.3125 15.9264C21.9927 15.9264 22.6609 16.2248 23.25 16.7916L25.8333 19.375"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_2_22">
-                    <rect width="31" height="31" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+      <div class="collection-header">
+        <h1>Popular Collections</h1>
+        <ul class="collection-fillter">
+          <li><a href="">Profile</a></li>
+          <li><a href="">New York</a></li>
+          <li><a href="">Relaxing</a></li>
+          <li><a href="">Person</a></li>
+          <li><a href="">Fashion</a></li>
+        </ul>
+      </div>
 
-              144
-            </p>
+      <div class="collections-list">
+        <div class="collection-card">
+          <div class="img-container">
+            <div class="main-img">
+              <img src="./imgs/1.png" alt="" />
+            </div>
+            <div class="imgs">
+              <img src="./imgs/2.png" alt="" /><img
+                src="./imgs/3.png"
+                alt=""
+              /><img src="./imgs/4.png" alt="" />
+            </div>
+          </div>
+          <div class="collection-info">
+            <p class="title">People</p>
+            <div class="status">
+              <i class="img-icon"
+                ><svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2_22)">
+                    <path
+                      d="M19.375 10.3333H19.3871"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.9583 5.16675H9.04167C6.90157 5.16675 5.16667 6.90164 5.16667 9.04175V21.9584C5.16667 24.0985 6.90157 25.8334 9.04167 25.8334H21.9583C24.0984 25.8334 25.8333 24.0985 25.8333 21.9584V9.04175C25.8333 6.90164 24.0984 5.16675 21.9583 5.16675Z"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.16667 19.3751L10.3333 14.2084C10.9224 13.6416 11.5906 13.3431 12.2708 13.3431C12.951 13.3431 13.6193 13.6416 14.2083 14.2084L20.6667 20.6667"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18.0833 18.0833L19.375 16.7916C19.9641 16.2248 20.6323 15.9264 21.3125 15.9264C21.9927 15.9264 22.6609 16.2248 23.25 16.7916L25.8333 19.375"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2_22">
+                      <rect width="31" height="31" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </i>
+              <p class="img-count">144</p>
+            </div>
           </div>
         </div>
-        <div class="colection">
-          <div class="main-img">
-            <img src="./imgs/1.png" alt="" />
-          </div>
-          <div class="imgs-list">
-            <img src="./imgs/2.png" alt="" />
-            <img src="./imgs/3.png" alt="" />
-            <img src="./imgs/4.png" alt="" />
-            <img src="./imgs/5.png" alt="" />
-          </div>
-          <div class="ref">
-            <p>People</p>
-            <p class="image-count">
-              <svg
-                width="31"
-                height="31"
-                viewBox="0 0 31 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_2_22)">
-                  <path
-                    d="M19.375 10.3333H19.3871"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M21.9583 5.16675H9.04167C6.90157 5.16675 5.16667 6.90164 5.16667 9.04175V21.9584C5.16667 24.0985 6.90157 25.8334 9.04167 25.8334H21.9583C24.0984 25.8334 25.8333 24.0985 25.8333 21.9584V9.04175C25.8333 6.90164 24.0984 5.16675 21.9583 5.16675Z"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5.16667 19.3751L10.3333 14.2084C10.9224 13.6416 11.5906 13.3431 12.2708 13.3431C12.951 13.3431 13.6193 13.6416 14.2083 14.2084L20.6667 20.6667"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M18.0833 18.0833L19.375 16.7916C19.9641 16.2248 20.6323 15.9264 21.3125 15.9264C21.9927 15.9264 22.6609 16.2248 23.25 16.7916L25.8333 19.375"
-                    stroke="#2C3E50"
-                    stroke-width="1.9375"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_2_22">
-                    <rect width="31" height="31" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
 
-              144
-            </p>
+        <div class="collection-card">
+          <div class="img-container">
+            <div class="main-img">
+              <img src="./imgs/21.png" alt="" />
+            </div>
+            <div class="imgs">
+              <img src="./imgs/22.png" alt="" /><img
+                src="./imgs/23.png"
+                alt=""
+              /><img src="./imgs/24.png" alt="" />
+            </div>
+          </div>
+          <div class="collection-info">
+            <p class="title">Nature</p>
+            <div class="status">
+              <i class="img-icon"
+                ><svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2_22)">
+                    <path
+                      d="M19.375 10.3333H19.3871"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.9583 5.16675H9.04167C6.90157 5.16675 5.16667 6.90164 5.16667 9.04175V21.9584C5.16667 24.0985 6.90157 25.8334 9.04167 25.8334H21.9583C24.0984 25.8334 25.8333 24.0985 25.8333 21.9584V9.04175C25.8333 6.90164 24.0984 5.16675 21.9583 5.16675Z"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.16667 19.3751L10.3333 14.2084C10.9224 13.6416 11.5906 13.3431 12.2708 13.3431C12.951 13.3431 13.6193 13.6416 14.2083 14.2084L20.6667 20.6667"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18.0833 18.0833L19.375 16.7916C19.9641 16.2248 20.6323 15.9264 21.3125 15.9264C21.9927 15.9264 22.6609 16.2248 23.25 16.7916L25.8333 19.375"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2_22">
+                      <rect width="31" height="31" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </i>
+              <p class="img-count">7k</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="img-container">
+            <div class="main-img">
+              <img src="./imgs/31.png" alt="" width="389" />
+            </div>
+            <div class="imgs">
+              <img src="./imgs/32.png" alt="" /><img
+                src="./imgs/33.png"
+                alt=""
+              /><img src="./imgs/34.png" alt="" />
+            </div>
+          </div>
+          <div class="collection-info">
+            <p class="title">History</p>
+            <div class="status">
+              <i class="img-icon"
+                ><svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2_22)">
+                    <path
+                      d="M19.375 10.3333H19.3871"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.9583 5.16675H9.04167C6.90157 5.16675 5.16667 6.90164 5.16667 9.04175V21.9584C5.16667 24.0985 6.90157 25.8334 9.04167 25.8334H21.9583C24.0984 25.8334 25.8333 24.0985 25.8333 21.9584V9.04175C25.8333 6.90164 24.0984 5.16675 21.9583 5.16675Z"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.16667 19.3751L10.3333 14.2084C10.9224 13.6416 11.5906 13.3431 12.2708 13.3431C12.951 13.3431 13.6193 13.6416 14.2083 14.2084L20.6667 20.6667"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18.0833 18.0833L19.375 16.7916C19.9641 16.2248 20.6323 15.9264 21.3125 15.9264C21.9927 15.9264 22.6609 16.2248 23.25 16.7916L25.8333 19.375"
+                      stroke="#2C3E50"
+                      stroke-width="1.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2_22">
+                      <rect width="31" height="31" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </i>
+              <p class="img-count">431</p>
+            </div>
           </div>
         </div>
       </div>
