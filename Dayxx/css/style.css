@@ -1,0 +1,244 @@
+﻿html {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #e6e6e4;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 40px 120px 100px 120px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .home {
+    font-size: 32px;
+    color: #1f1d2a;
+  }
+
+  .sign-in {
+    border: 2px solid #1f1d2a;
+    color: #1f1d2a;
+    width: 110px;
+    height: 45px;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+
+.nav-bar {
+  ul {
+    display: flex;
+    gap: 52px;
+    list-style-type: none;
+    li {
+      a {
+        color: #1f1d2a;
+        font-size: 16px;
+        font-weight: 500;
+        width: 48px;
+        height: 24px;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 4px;
+      }
+
+      a:hover {
+        border-bottom: 2px solid #1f1d2a;
+      }
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  gap: 81px;
+}
+
+.main-title {
+  h1 {
+    font-weight: 600;
+    font-size: 55px;
+    margin-bottom: 30px;
+    color: rgba(31, 29, 42, 1);
+  }
+
+  p {
+    color: rgba(155, 148, 142, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+
+  button {
+    width: 170px;
+    height: 70px;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(31, 29, 42, 1);
+    background-color: rgba(150, 198, 127, 1);
+  }
+}
+
+.main-img-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
+
+  .img-circle {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .rating-ui {
+    position: absolute;
+    z-index: 10;
+    width: 180px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    top: 401px;
+    left: 30;
+  }
+  .rating-title {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(31, 29, 42, 1);
+    margin-bottom: 2px;
+  }
+
+  .rating-subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(155, 148, 142, 1);
+    margin-bottom: 19px;
+  }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  &::after {
+    z-index: 111;
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    right: 0;
+    background: #9499b7 url("../imgs/Polygon1.png") no-repeat center / 25px;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+  }
+}
+
+.companies-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(31, 29, 42, 1);
+  }
+
+  .logos {
+    display: flex;
+    gap: 60px;
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.some-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 70px;
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(31, 29, 42, 1);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 32px;
+    color: rgba(31, 29, 42, 1);
+
+    .last-letter {
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        background-color: rgba(150, 198, 127, 1);
+        bottom: 3px;
+        z-index: -1;
+        left: 0;
+      }
+    }
+  }
+}
+
+.user-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.user-card {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  flex: 0 1 0;
+
+  .user-info {
+    padding: 20px;
+
+    .user-name {
+      margin-bottom: 6px;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(31, 29, 42, 1);
+    }
+
+    .user-job {
+      color: rgba(155, 148, 142, 1);
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}
