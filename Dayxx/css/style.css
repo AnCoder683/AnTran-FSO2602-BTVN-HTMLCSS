@@ -92,6 +92,7 @@ body {
     font-size: 20px;
     color: rgba(31, 29, 42, 1);
     background-color: rgba(150, 198, 127, 1);
+    cursor: pointer;
   }
 }
 
